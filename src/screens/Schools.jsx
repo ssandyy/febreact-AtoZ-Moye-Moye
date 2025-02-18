@@ -17,7 +17,7 @@ const Schools = () => {
         {/* OR  - break in componenet */}
         {/* Best practice */}
         <h1>Schools List from componenet break..!</h1>
-
+        <h2 style={{color:'red'}}>School details Card..!</h2>
         {SchoolList.map(({id, name, location}) => (
             <SchoolCard key={id} name={name} location={location} />
         ))}
