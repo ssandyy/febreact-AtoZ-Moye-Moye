@@ -1,4 +1,8 @@
-import React from 'react'
+
+
+
+// create new screen/component + form
+// handled on click + conditional rendering functionality
 
 const Register = () => {
 
