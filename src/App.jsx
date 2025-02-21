@@ -1,22 +1,46 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import About from './screens/About'
-import Contact from './screens/Contact'
 import Register from './screens/Register'
 import Schools from './screens/Schools'
-import Signup from './screens/Signup'
 import UserList from './screens/UserList'
+
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Register />
+  },
+  {
+    path: "/about",
+    element: <About />
+  },
+  {
+    path: "users",
+    element: <UserList />
+  },
+  {
+    path: "schools",
+    element: <Schools />
+  }
+]);
+
 
 function App() {
 
   return (
     <>
       <h1>Hello React..!</h1>
-      <Register />
+      
+      {/* <Register />
       <Signup />
       <About />
       <Contact />
       <UserList />
-      <Schools />
+      <Schools /> */} 
+
+      <RouterProvider router={router} />
     </>
   )
 }
