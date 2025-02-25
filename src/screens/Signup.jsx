@@ -68,30 +68,32 @@ useEffect(() => {
                      value={age2}
                      onChange={(e) => setAge2(e.target.value)}
                        />
-                       {age2 >= 18 ? (
-
-                                  <div>
-                                      <input 
-                                        className="input-box" 
-                                        type="email" 
-                                        placeholder="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                      />
-                                      <input 
-                                        className="input-box" 
-                                        type="password" 
-                                        placeholder="password"
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)} 
-                                      />
-                                      <button onClick={handleSubmit}>Submit</button>
-                                      </div>
-                                  ) : (
-                                  <div>
-                                    <h2>you are not 18, please increase your age..! </h2>
-                                  </div>
-                                  ) }
+                    {age2 >= 18 
+                    ? 
+                    (
+                        <div>
+                            <input 
+                              className="input-box" 
+                              type="email" 
+                              placeholder="email"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <input 
+                              className="input-box" 
+                              type="password" 
+                              placeholder="password"
+                              value={password}
+                              onChange={(e) => setPassword(e.target.value)} 
+                            />
+                            <button onClick={handleSubmit}>Submit</button>
+                            </div>
+                        ) : (
+                        <div>
+                          <h2>you are not 18, please increase your age..! </h2>
+                        </div>
+                        )
+                      }
                 </form>
           </>
     
