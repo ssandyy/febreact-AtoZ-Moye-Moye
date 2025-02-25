@@ -1,28 +1,36 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import About from './screens/About'
-import Register from './screens/Register'
+import HomeRegister from './screens/HomeRegister'
 import Schools from './screens/Schools'
+import Signup from './screens/Signup'
 import UserList from './screens/UserList'
-
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Register />
+    element: <HomeRegister />
   },
   {
     path: "/about",
     element: <About />
   },
   {
-    path: "users",
+    path: "/users",
     element: <UserList />
   },
   {
-    path: "schools",
+    path: "/schools",
     element: <Schools />
+  },
+  {
+    path: "/home-register",
+    element: <HomeRegister />
+  },
+  {
+    path: "/signup",
+    element: <Signup />
   }
 ]);
 
@@ -33,7 +41,7 @@ function App() {
     <>
       <h1>Hello React..!</h1>
       
-      {/* <Register />
+      {/* <HomeRegister />
       <Signup />
       <About />
       <Contact />
